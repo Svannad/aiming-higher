@@ -1,0 +1,535 @@
+/* mine fonts
+font-family: 'Assistant', sans-serif;
+font-family: 'News Cycle', sans-serif;
+*/
+
+/*Fælles styling*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    color: #29272c;
+    background-color: #f4eae3;
+}
+
+h1 {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: default;
+}
+
+h2 {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 30px;
+    color: #2f2a72;
+    cursor: default;
+}
+
+h3 {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 25px;
+    color: #2f2a72;
+    cursor: default;
+}
+
+h4 {
+    font-size: 20px;
+    cursor: default;
+}
+
+p {
+    font-size: larger;
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dato {
+    color: #ef4035;
+    font-size: medium;
+}
+
+.breyd-tekst {
+    font-style: italic;
+    padding: 40px;
+    font-size: 25px;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 40px;
+}
+
+.button {
+    text-decoration: none;
+    font-size: large;
+    border: 3px solid #ef4035;
+    padding: 5px 20px;
+    width: 80px;
+    color: #ef4035;
+    box-sizing: content-box;
+}
+
+.button:hover {
+    background-color: #ef4035;
+    color: #f4eae3;
+}
+
+/*Header*/
+
+header {
+    background-image: url(../img/header.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header a {
+    color: #2f2a72; 
+    transition: 0.2s ease;
+}
+
+header ul {
+    list-style: none;
+}
+
+/*Logo - Header*/
+
+figure {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#logo {
+    width: 165px;
+    padding-left: 22px;
+}
+
+/*Menupunkter - Header*/
+
+#menu-items {
+    display: flex;
+    align-items: center;
+    margin-left: 340px;
+}
+
+#menu-items li {
+    padding: 0 35px;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+#menu-items a:hover {
+    color: #f3c030;
+}
+
+/*Dropdown Menu - Header*/
+.mega-menu{
+    position: absolute;
+    background-color: #2f2a72;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
+
+.mega-menu .content {
+    background-color: #2f2a72;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 3rem;
+}
+
+.content .col h2{
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #f3c030;
+}
+
+.col .mega-links li, .col .mega-links li a, .dropdown-menu li a  {
+    padding: 0 1rem;
+    color: #f4eae3;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.mega-drop:hover .mega-menu {
+    top: 77px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Searchbar - Header*/
+#search-bar {
+    width: 200px;
+    height: 30px;
+    background-color: #ff938c;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-right: 30px;
+    padding-right: 3px;
+}
+
+#search-bar input {
+background: transparent;
+flex: 1;
+border: 0;
+outline: none;
+}
+
+#search-bar button i {
+    height: 25px;
+    width: 25px;
+    background-color: #ff938c;
+    text-align: center;
+    line-height: 25px;
+    color: #2f2a72;
+    transition: all 0.2s ease;
+}
+    
+#search-bar button i:hover {
+        background-color: #2f2a72;
+        color: #f3c030;
+}
+    
+#search-bar button {
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+}
+
+/*Forside*/
+
+main i {
+    color: #f3c030;
+    font-size: larger;
+    padding: 5px 7px;
+}
+
+main i:hover {
+    background-color: #f3c030;
+    color: #2f2a72;
+    cursor: pointer;
+}
+
+/*Nyeste - Forside*/
+
+#nyeste {
+    display: flex;
+    position: relative;
+    padding-top: 50px;
+}
+
+#nyeste .breyd-tekst {
+    text-align: left;
+}
+
+#nytt {
+    width: 67%;
+    float: left;
+    margin: auto 40px;
+}
+
+#main-button {
+    font-size: x-large;
+    width: 100px;
+}
+
+#nytt-img {
+    width: 33%;
+    float: right;
+    padding: 40px 0 30px 0;
+    margin: auto 0;
+}
+
+#nytt-img img {
+    width: 400px;
+}
+
+/*Kolonner - Forside*/
+
+#underside {
+    background-image: url(../img/kolon.png);
+    background-size: cover;
+}
+.kolonner {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.kolonner img {
+    width: 300px;
+}
+
+.kolon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 40px;
+    padding: 20px;
+    flex-direction: column;
+    width: 350px;
+    background-color: rgba(244,234,227,0.9);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.kolon:hover {
+    transform: scale(1.05);
+}
+
+
+.kolon h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #2f2a72;
+}
+
+.k-tekst {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 20px 0;
+}
+
+.k-yvirs {
+    color: #f3c030;
+    padding-left: 93px;
+    padding-top: 20px;
+}
+
+.k-yvirs:first-child {
+    color: #2f2a72;
+}
+
+/*Artikler Fælles Styling*/
+
+.sub-header {
+    height: 380px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.sub-header h1 {
+    padding-top: 250px;
+    color: #2f2a72;
+}
+
+.wrapper {
+    display: flex;
+}
+
+#artikel-1 p, #artikel-2 p, #artikel-3 p {
+    line-height: 40px;
+}
+
+/*Artikel 1 - EM 2022*/
+
+#em-2022 {
+    background-image: url(../img/em-arena.jpg);
+}
+ 
+.wrapper article {
+    width: 55%;
+    margin-left: 50px;
+}
+
+.wrapper h4 {
+    padding-bottom: 10px;
+}
+
+.em-tekst {
+    padding-bottom: 40px;
+}
+
+#em-img {
+    width: 45%;
+}
+
+#em-img img {
+    width: 550px;
+    padding: 50px 0 50px 150px;
+}
+/*Artikel 2 - Recurve Bue*/
+
+#recurve-bue {
+    background-image: url(../img/recurve-cover.jpg);
+}
+
+#artikel-2 section:nth-child(2) {
+    margin-left:30px;
+    width: 60%;
+    padding-top: 40px;
+}
+
+#artikel-2 section:nth-child(2) h3 {
+    padding-bottom: 20px;
+}
+
+.rb-list {
+    display: flex;
+    margin: 150px 0;
+    position: relative;
+    padding: 40px 0 80px 30px;
+}
+
+.rb-list div {
+    width: 60%;
+    height: 250px;
+}
+
+.rb-list div h4 {
+    padding-bottom: 20px;
+}
+
+.rb-list div ul li {
+    font-size: large;
+    font-style: italic;
+    padding-bottom: 5px;
+}
+
+.rb-list div ul li p {
+    font-size: medium;
+    font-style: normal;
+}
+
+
+.rb-list div a {
+    color: #ef4035;
+}
+
+.rb-list div a:hover {
+    text-decoration: underline;
+}
+
+.rb-list:nth-child(3), .rb-list:nth-child(6), .rb-list:nth-child(9) {
+    background-color: #2f2a72;
+    color: #f3c030;
+}
+
+.rb-list:nth-child(4), .rb-list:nth-child(7), .rb-list:nth-child(10) {
+    background-color: #ef4035;
+    color: #f4eae3;
+}
+
+.rb-list:nth-child(5), .rb-list:nth-child(8) {
+    background-color: #f3c030;
+    color: #2f2a72;
+}
+
+.rb-list img {
+    height: 450px;
+    position: absolute;
+    top: -40px;
+    right: 80px;
+}
+
+
+/*Artikel 3 - Saml Piler*/
+
+#saml-piler {
+    background-image: url(../img/piler-cover.jpg);
+}
+
+#artikel-3 img {
+    width: 700px;
+    margin-left: 350px;
+    padding-bottom: 50px;
+}
+
+#artikel-3 h3, #artikel-3 p:nth-child(5) {
+    padding-bottom: 40px;
+    margin-left:60px;
+    width: 60%;
+}
+
+#artikel-3 ol {
+    width: 70%;
+    margin-left: 200px;
+}
+
+#artikel-3 ol li {
+    padding-bottom: 50px;
+    list-style: none;
+}
+
+#artikel-3 ol li h4 {
+    padding-bottom: 20px;
+}
+
+#artikel-3 video {
+    width: 500px;
+    margin-left: 250px;
+    margin-top: 55px;
+    padding: 20px;
+    background-color: #2f2a72;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #2f2a72;
+    padding: 40px 20px 10px 20px;
+    text-align: center;
+}
+
+footer h3, footer i {
+    color: #f3c030;
+    padding-bottom: 15px;
+}
+
+footer a {
+    color: #f3c030;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+footer a:hover {
+    color: #f4eae3;
+}
+
+footer p {
+    font-size: medium;
+    color: #f3c030;
+}
+
+footer h3 {
+    font-family: 'Assistant', sans-serif;
+    font-size: 20px;
+}
+
+
